@@ -1,0 +1,7 @@
+.container-24 {padding:0 24px;}
+.tab_type01 {width:100%; overflow:hidden;}
+.tab_type01 .tab {display:flex; justify-content:center; align-items:center;}
+.tab_type01 .tab li {width:100%;}
+/*		.tab_type01 .tab li {display:inline-block; width:33.333%; padding:0 3px; vertical-align:top; box-sizing:border-box;}*/
+.tab_type01 .tab li a {display:block; font-size:16px; padding:20px 0; border:1px solid #fff; text-align:center;}
+.tab_type01 .tab_conts {margin-top:20px; padding:20px 0; font-size:20px; text-align:center; box-sizing:border-box;}
