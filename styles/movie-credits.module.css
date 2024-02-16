@@ -1,0 +1,3 @@
+.container {display: grid;	grid-template-columns: repeat(auto-fit,minmax(150px,1fr));	gap: 50px;	width: 100%;	margin: 0 auto;}
+.inner_wrap {text-align:center;}
+.inner_wrap p {margin-top:10px;}

@@ -3,6 +3,7 @@ import { Suspense, useState } from 'react';
 import styles from '../../styles/tab.module.css';
 import MovieVideos from './movie-videos';
 import MovieSimilar from './movie-similar';
+import MovieCredits from './movie-credits';
 
 interface TabProps {
   id: string;
@@ -26,7 +27,7 @@ export default function Tab({ id }: TabProps)  {
 						<a>Similar</a>
 					</li>
 					<li className={activeTab === 2 ? 'on' : ''} onClick={() => handleTabClick(2)}>
-						<a>탭3</a>
+						<a>Credits</a>
 					</li>
 				</ul>
 				<div className={`${styles.tab_conts} ${activeTab === 0 ? 'first' : ''}`} style={{ display: activeTab === 0 ? 'block' : 'none' }}>
@@ -40,7 +41,9 @@ export default function Tab({ id }: TabProps)  {
 					</Suspense>
 				</div>
 				<div className={styles.tab_conts} style={{ display: activeTab === 2 ? 'block' : 'none' }}>
-					<p>내용3</p>
+					<Suspense fallback={<h1>Loading movie credits</h1>}>
+						<MovieCredits id={id}/>
+					</Suspense>
 				</div>
 			</div>
 		</div>
